@@ -57,7 +57,7 @@ export const PROFILE = {
     stage: 'Pre-Launch Engineering Lab',
     established: 'Est. 2026',
   },
-  email: 'pavithra@veyrith-labs.com',
+  email: 'pavithranarsing44@gmail.com',
 };
 
 export const HERO_METRICS = [

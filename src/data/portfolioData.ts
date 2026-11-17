@@ -45,9 +45,9 @@ export const PROFILE = {
   age: 19,
   headline: 'Engineering visual intelligence and language systems.',
   subheadline:
-    'Python ML engineer, OpenCV developer, and LLM trainer studying at Newton School of Technology, St. Mary’s Institute of Technology, Hyderabad — and Co-Founder of Veyrith Labs.',
+    'Python ML engineer, OpenCV developer, and LLM trainer studying at Newton School of Technology · SMRU, Hyderabad — and Co-Founder of Veyrith Labs.',
   location: 'Hyderabad, India',
-  college: "Newton School of Technology · St. Mary's Institute of Technology",
+  college: "Newton School of Technology · SMRU",
   school: 'Kendriya Vidyalaya',
   venture: {
     name: 'Veyrith Labs',
@@ -264,7 +264,7 @@ export const JOURNEY_MILESTONES: JourneyMilestone[] = [
   {
     index: '03',
     period: 'Present · Year 1',
-    institution: "Newton School of Technology · St. Mary's Institute of Technology",
+    institution: "Newton School of Technology · SMRU",
     location: 'Hyderabad',
     role: 'First-Year Undergraduate · Computer Science & AI',
     description:

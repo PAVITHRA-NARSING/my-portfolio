@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-obsidian: #08090b;
+  --color-smoke: #111317;
+  --color-glass: rgba(255, 255, 255, 0.035);
+  --color-glass-hover: rgba(255, 255, 255, 0.06);
+  --color-bone: #eae8e1;
+  --color-ash: #9ea39f;
+  --color-sage: #b8c4a4;
+  --color-sand: #cbb89d;
+}
+
+@layer base {
+  html {
+    background-color: #08090b;
+    color: #eae8e1;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    letter-spacing: 0.005em;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  /* Custom refined dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #08090b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(184, 196, 164, 0.35);
+  }
+}
+
+/* Smoky Glassmorphic Surface Utilities (Non-neon, subtle frosted depth) */
+.smoky-glass {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.048) 0%,
+    rgba(255, 255, 255, 0.018) 100%
+  );
+  backdrop-filter: blur(22px) saturate(115%);
+  -webkit-backdrop-filter: blur(22px) saturate(115%);
+  border: 1px solid rgba(255, 255, 255, 0.085);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.06),
+    0 20px 50px -20px rgba(0, 0, 0, 0.65);
+}
+
+.smoky-glass-elevated {
+  background: linear-gradient(
+    155deg,
+    rgba(255, 255, 255, 0.068) 0%,
+    rgba(20, 23, 27, 0.72) 100%
+  );
+  backdrop-filter: blur(28px) saturate(120%);
+  -webkit-backdrop-filter: blur(28px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    0 28px 64px -22px rgba(0, 0, 0, 0.8);
+}
+
+.smoky-hairline {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle marquee keyframe */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 34s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Slow ambient smoke drift */
+@keyframes smoke-drift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2%, -3%, 0) scale(1.06);
+  }
+}
+
+.animate-smoke-slow {
+  animation: smoke-drift 18s ease-in-out infinite;
+}
+
+.animate-smoke-reverse {
+  animation: smoke-drift 24s ease-in-out infinite reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-smoke-slow,
+  .animate-smoke-reverse {
+    animation: none;
+  }
+}

@@ -158,7 +158,7 @@ export default function App() {
                           I&apos;m <span className="text-[#eae8e1] font-medium">Narsing Pavithra</span>,
                           a 19-year-old first-year engineering student at{' '}
                           <span className="text-[#eae8e1]">
-                            Newton School of Technology, St. Mary&apos;s Institute of Technology, Hyderabad
+                            Newton School of Technology · SMRU, Hyderabad
                           </span>{' '}
                           and an alumna of Kendriya Vidyalaya. Beyond hackathons and computer vision
                           research, I co-founded{' '}
@@ -338,7 +338,7 @@ export default function App() {
                   </h1>
                   <p className="mt-4 text-base leading-relaxed text-[#9ea39f]">
                     19 years old in Hyderabad — transitioning from Kendriya Vidyalaya fundamentals
-                    into Newton School of Technology (St. Mary&apos;s Institute of Technology) and
+                    into Newton School of Technology · SMRU and
                     co-founding Veyrith Labs.
                   </p>
                 </div>
@@ -370,7 +370,7 @@ export default function App() {
             <div>
               <span className="font-medium text-[#eae8e1]">{PROFILE.name}</span>
               <span aria-hidden="true"> · </span>
-              <span>Newton School of Technology, St. Mary&apos;s Institute of Technology, Hyderabad</span>
+              <span>Newton School of Technology · SMRU, Hyderabad</span>
             </div>
 
             <div className="flex flex-wrap items-center gap-5">

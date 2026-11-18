@@ -71,7 +71,7 @@ export const WASTE_SAMPLES: WasteSample[] = [
   {
     id: 'plastic',
     name: 'PET Polymer Bottle',
-    classLabel: 'Recyclable Plastic · Grade 1',
+    classLabel: 'Non-Biodegradable',
     recyclability: 'Sort to Polymer Recovery Stream',
     confidence: 96.4,
     bbox: { x: 96, y: 44, w: 128, h: 158 },
@@ -88,7 +88,7 @@ export const WASTE_SAMPLES: WasteSample[] = [
   {
     id: 'organic',
     name: 'Organic Biomass Peel',
-    classLabel: 'Biodegradable Organic',
+    classLabel: 'Biodegradable',
     recyclability: 'Route to Aerobic Composting',
     confidence: 94.8,
     bbox: { x: 74, y: 66, w: 172, h: 124 },
@@ -105,7 +105,7 @@ export const WASTE_SAMPLES: WasteSample[] = [
   {
     id: 'metal',
     name: 'Pressed Aluminum Can',
-    classLabel: 'Ferrous & Non-Ferrous Metal',
+    classLabel: 'Non-Biodegradable',
     recyclability: 'Sort to Eddy-Current Smelter',
     confidence: 97.9,
     bbox: { x: 108, y: 52, w: 104, h: 146 },
@@ -123,7 +123,7 @@ export const WASTE_SAMPLES: WasteSample[] = [
   {
     id: 'paper',
     name: 'Corrugated Fiber Box',
-    classLabel: 'Cellulose & Paperboard',
+    classLabel: 'Non-Biodegradable',
     recyclability: 'Route to Dry Pulp Baler',
     confidence: 93.2,
     bbox: { x: 68, y: 60, w: 184, h: 130 },
@@ -144,13 +144,13 @@ export const PROJECTS: ProjectItem[] = [
   {
     id: 'garbage-classifier',
     title: 'Automated Garbage Classifier',
-    subtitle: 'Real-time OpenCV segmentation & CNN waste stream categorization',
+    subtitle: 'OpenCV binary waste classification',
     category: 'vision',
     categoryLabel: 'Computer Vision',
     year: '2026',
     stack: ['Python', 'OpenCV', 'PyTorch', 'MobileNetV3', 'NumPy'],
     summary:
-      'An end-to-end computer vision waste sorting pipeline that isolates foreground waste items using adaptive thresholding and Canny contour extraction in OpenCV before classifying them across recyclable, organic, metallic, and paper streams.',
+      'An OpenCV computer vision project that classifies waste into two categories: biodegradable and non-biodegradable.',
     architecture: [
       'Frame preprocessing with Gaussian denoising, CLAHE contrast normalization, and HSV background suppression.',
       'Contour-bounded ROI cropping in OpenCV to isolate target objects before neural forward pass.',
@@ -160,7 +160,7 @@ export const PROJECTS: ProjectItem[] = [
     metrics: [
       { label: 'Validation Accuracy', value: '95.8%' },
       { label: 'Frame Latency', value: '17 ms' },
-      { label: 'Waste Classes', value: '6 Streams' },
+      { label: 'Waste Classes', value: '2 Classes' },
     ],
     featured: true,
     visualType: 'garbage',

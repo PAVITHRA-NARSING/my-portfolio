@@ -261,7 +261,7 @@ export function GarbageClassifierDemo({ onOpenFullProject }: GarbageClassifierDe
         {/* Right: Live Classification Readout & Spectral Feature Bars */}
         <div className="lg:col-span-5 flex flex-col justify-between gap-5 rounded-xl border border-white/[0.08] bg-white/[0.02] p-5">
           <div>
-            <p className="text-xs text-[#9ea39f]">Predicted Waste Stream</p>
+            <p className="text-xs text-[#9ea39f]">Predicted Class</p>
             <AnimatePresence mode="wait">
               <motion.div
                 key={sample.id}
@@ -274,7 +274,7 @@ export function GarbageClassifierDemo({ onOpenFullProject }: GarbageClassifierDe
                   {sample.classLabel}
                 </h3>
                 <p className="mt-1 text-sm" style={{ color: palette.stroke }}>
-                  {sample.recyclability}
+                  {'Binary classifier · 2 classes'}
                 </p>
               </motion.div>
             </AnimatePresence>
